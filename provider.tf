@@ -1,5 +1,5 @@
 provider "mysql" {
-  endpoint = lookup(var.mysql_config, "host", "")
-  username = lookup(var.mysql_config, "username", "")
-  password = lookup(var.mysql_config, "password", "")
+  endpoint = lookup(var.provider_config, "host", "")
+  username = lookup(var.provider_config, "username", "")
+  password = lookup(var.provider_config, "password", "")
 }

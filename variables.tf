@@ -59,24 +59,16 @@ variable "mysql_user_password" {
   default     = ""
 }
 
-variable "mysql_config" {
+variable "provider_config" {
   description = "(Optional) A list of objects that contain RDS information including `username`, `password`, `port`, `hostname`, and 'arn' to create lambda rotation"
   type = object({
-    engine               = string
     host                 = string
     username             = string
     password             = string
-    dbname               = string
-    port                 = string
-    dbInstanceIdentifier = string
   })
   default = {
-    engine               = "mysql"
     host                 = ""
     username             = "root"
     password             = ""
-    dbname               = ""
-    dbInstanceIdentifier = ""
-    port                 = "3306"
   }
 }
